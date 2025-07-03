@@ -4,8 +4,13 @@
     "title": "Google Calendar Event API",
     "version": "1.0.0"
   },
+  "servers": [
+    {
+      "url": "https://example.com"
+    }
+  ],
   "paths": {
-    "/events": {
+    "/event": {
       "post": {
         "operationId": "createEvent",
         "summary": "カレンダーに予定を追加",
