@@ -1,0 +1,54 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Google Calendar Event API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/events": {
+      "post": {
+        "operationId": "createEvent",
+        "summary": "カレンダーに予定を追加",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Event"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "イベント作成に成功"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Event": {
+        "type": "object",
+        "properties": {
+          "summary": {
+            "type": "string",
+            "description": "予定のタイトル"
+          },
+          "start": {
+            "type": "string",
+            "format": "date-time",
+            "description": "開始日時（ISO 8601形式）"
+          },
+          "end": {
+            "type": "string",
+            "format": "date-time",
+            "description": "終了日時（ISO 8601形式）"
+          }
+        },
+        "required": ["summary", "start", "end"]
+      }
+    }
+  }
+}
