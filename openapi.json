@@ -10,7 +10,7 @@
     }
   ],
   "paths": {
-    "/event": {
+    "/": {
       "post": {
         "operationId": "createEvent",
         "summary": "カレンダーに予定を追加",
