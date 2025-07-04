@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "https://guu2119880308.github.io/gpt-calendar-api"
+      "url": "https://asia-northeast1-arcane-fire-464612-g4.cloudfunctions.net/createEvent"
     }
   ],
   "paths": {
